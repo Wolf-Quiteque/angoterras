@@ -189,6 +189,44 @@ h2 {
 #navbar.scrolled .nav-links a { color: var(--text-mid); }
 #navbar.scrolled .nav-links a:hover { background: var(--green-pale); color: var(--green-dark); }
 
+/* ===== LANG SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  gap: .25rem;
+  margin-left: 1rem;
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.7);
+  transition: var(--transition);
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,.15);
+  color: var(--white);
+}
+.lang-btn.active {
+  background: rgba(255,255,255,.2);
+  color: var(--white);
+}
+#navbar.scrolled .lang-btn {
+  color: var(--text-light);
+}
+#navbar.scrolled .lang-btn:hover {
+  background: var(--green-pale);
+  color: var(--green-dark);
+}
+#navbar.scrolled .lang-btn.active {
+  background: var(--green-mid);
+  color: var(--white);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -696,6 +734,7 @@ h2 {
   .parceria-grid { gap: 3rem; }
 
   .hamburger { display: flex; }
+  .lang-switcher { margin-left: auto; margin-right: .75rem; }
   .nav-links {
     display: none;
     position: absolute;

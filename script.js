@@ -85,15 +85,17 @@ revealEls.forEach(el => revealObserver.observe(el));
 const form        = document.getElementById('contactForm');
 const successMsg  = document.getElementById('formSuccess');
 
+const isEN = document.documentElement.lang === 'en';
+
 form.addEventListener('submit', e => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'A enviar…';
+  btn.textContent = isEN ? 'Sending…' : 'A enviar…';
   btn.disabled = true;
 
   setTimeout(() => {
     form.reset();
-    btn.textContent = 'Enviar Mensagem';
+    btn.textContent = isEN ? 'Send Message' : 'Enviar Mensagem';
     btn.disabled = false;
     successMsg.style.display = 'block';
     setTimeout(() => (successMsg.style.display = 'none'), 5000);
