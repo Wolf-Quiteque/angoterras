@@ -142,35 +142,18 @@ h2 {
 .logo {
   display: flex;
   align-items: center;
-  gap: .75rem;
 }
-.logo-icon {
-  width: 42px; height: 42px;
-  background: var(--green-mid);
-  color: white;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: .95rem;
-  letter-spacing: .05em;
-  flex-shrink: 0;
+.logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 148px;
+  object-fit: contain;
+  display: block;
 }
-.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-.logo-main {
-  font-weight: 700;
-  font-size: .95rem;
-  color: var(--white);
-  transition: color var(--transition);
+.logo-img--footer {
+  height: 52px;
+  max-width: 175px;
 }
-.logo-sub {
-  font-size: .7rem;
-  color: rgba(255,255,255,.75);
-  transition: color var(--transition);
-}
-#navbar.scrolled .logo-main { color: var(--green-dark); }
-#navbar.scrolled .logo-sub  { color: var(--text-light); }
 
 .nav-links {
   display: flex;
